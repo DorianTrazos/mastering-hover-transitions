@@ -1,0 +1,21 @@
+.button {
+  position: relative;
+  background-color: transparent;
+  color: rgb(240 248 255 / 0.4);
+  border: 1px solid rgb(240 248 255 / 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  outline: 1px solid transparent;
+  outline-offset: 5px;
+  transition: outline-offset 0.3s, color 0.3s, outline 0.3s;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    outline: 1px solid aliceblue;
+    outline-offset: -1px;
+    border-color: transparent;
+    color: rgb(240 248 255);
+  }
+}

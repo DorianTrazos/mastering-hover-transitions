@@ -1,0 +1,67 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  height: 300px;
+  background-image: url(../../../assets/images/1.jpg);
+  background-size: 150%;
+  background-position: center;
+  transition: background-size 0.3s;
+}
+
+@media (hover: hover) {
+  .box:hover {
+    background-size: 100%;
+  }
+}
+
+.box-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  transition: gap 0.3s;
+  isolation: isolate;
+}
+
+@media (hover: hover) {
+  .box:hover .box-info {
+    gap: 1rem;
+  }
+}
+
+.box-title,
+.box-text {
+  position: relative;
+  margin-block: 0;
+}
+
+.box-title::after,
+.box-title::before {
+  content: '';
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(255 255 255 / 0.4);
+  transition: translate 0.3s, rotate 0.3s;
+  z-index: -1;
+}
+
+@media (hover: hover) {
+  .box:hover .box-title::after,
+  .box:hover .box-title::before {
+    translate: 0 -0.5rem;
+  }
+
+  .box:hover .box-title::after {
+    rotate: 45deg;
+  }
+
+  .box:hover .box-title::before {
+    rotate: -45deg;
+  }
+}
